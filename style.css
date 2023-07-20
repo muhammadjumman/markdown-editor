@@ -1,0 +1,118 @@
+/* style.css */
+@import 'node_modules/highlight.js/styles/github.css';
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+
+
+#app{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+div>h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.markdown {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0rem;
+  gap: 2rem;
+}
+
+#show{
+  border: 1px solid black;
+  padding: 5px;
+  
+  overflow-y: auto;
+}
+
+#edit{
+  padding: 5px;
+}
+
+
+/* Media Queries */
+
+/* For Mobile Devices (up to 767px) */
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 16px; /* Adjust font size for mobile */
+  }
+  
+  div > h1 {
+    font-size: 2em; /* Adjust heading size for mobile */
+
+  }
+  
+  .markdown {
+    flex-direction: column; /* Stack elements vertically for mobile */
+    gap: 1rem;
+  }
+}
+
+/* For Tablet Devices (768px to 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  body {
+    font-size: 18px; /* Adjust font size for tablet */
+  }
+  
+  div > h1 {
+    font-size: 2.5em; /* Adjust heading size for tablet */
+  }
+  
+  .markdown {
+    gap: 1.5rem;
+  }
+}
